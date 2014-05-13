@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="proposedAmount">
+		<field-validator type="int">
+			<param name="min">0</param>
+			<param name="max">2000</param>
+			<message>Please enter amount between ${min} and ${max}</message>
+		</field-validator>
+	</field>
+
+	<field name="depositedAmount">
+		<field-validator type="int">
+			<param name="min">0</param>
+			<param name="max">2000</param>
+			<message>Please enter amount between ${min} and ${max}</message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[proposedAmount<depositedAmount]]></param>
+			<message>Deposited Amount can not be greater then proposed amount!!
+			</message>
+		</field-validator>
+	</field>
+
+	<field name="proposedDate">
+		<field-validator type="required">
+			<param name="trim">true</param>
+			<message>Please select proposed date!!</message>
+		</field-validator>
+		<field-validator type="date">
+           <param name="trim">true</param>
+			<message>Please select date!!</message>
+		</field-validator>
+	</field>
+
+	<field name="paymentDate">
+		<field-validator type="required">
+			<param name="trim">true</param>
+			<message>Please select payment date!!</message>
+		</field-validator>
+		<field-validator type="date">
+			<message>Please select date!!</message>
+		</field-validator>
+	</field>
+
+	<field name="paymentMode">
+		<field-validator type="required">
+			<param name="trim">true</param>
+			<message>Please select payment mode!!</message>
+		</field-validator>
+	</field>
+
+</validators>

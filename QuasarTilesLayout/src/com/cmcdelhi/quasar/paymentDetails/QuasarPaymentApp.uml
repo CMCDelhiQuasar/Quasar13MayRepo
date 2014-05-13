@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Persistency="http:///schemas/Persistency/NS/0" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/Persistency/NS/0 pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2-Annotation-Persistency http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_4VBoAKrBEeOf1O9AMTn6UA" name="QuasarPaymentApp">
+    <eAnnotations xmi:id="_4dH0EKrBEeOf1O9AMTn6UA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_4dH0EarBEeOf1O9AMTn6UA" source="codegen">
+        <details xmi:id="_4dH0EqrBEeOf1O9AMTn6UA" key="codegenDirectory" value="/QuasarPaymentApp/src"/>
+        <details xmi:id="_4pTO4KrBEeOf1O9AMTn6UA" key="AssociatedSourceCode" value="/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/FullFeePayment.java;1322748145/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/InstallmentPayment.java;3995846947/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/InstallmentType.java;470499546/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/Payment.java;2495069340/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/PaymentDetails.java;3606269504/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/PaymentStatus.java;1079685595/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/RegistrationPayment.java;3656735859/1;/QuasarPaymentApp/src/com/cmcdelhi/quasar/paymentDetails/NewClass1.java;2283403457/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_4jQRQKrBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRQarBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRQqrBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRQ6rBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRRKrBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRRarBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRRqrBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQRR6rBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_4jQ4UKrBEeOf1O9AMTn6UA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4i32wKrBEeOf1O9AMTn6UA" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4i32warBEeOf1O9AMTn6UA" name="cmcdelhi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_4i32wqrBEeOf1O9AMTn6UA" name="quasar">
+          <packagedElement xmi:type="uml:Package" xmi:id="_4i6TAKrBEeOf1O9AMTn6UA" name="paymentDetails">
+            <packagedElement xmi:type="uml:Class" xmi:id="_4jPDIKrBEeOf1O9AMTn6UA" name="FullFeePayment">
+              <generalization xmi:id="_4kOhoarBEeOf1O9AMTn6UA" general="_4jdsoKrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_4jQ4UarBEeOf1O9AMTn6UA" name="InstallmentPayment">
+              <generalization xmi:id="_4kWdcarBEeOf1O9AMTn6UA" general="_4jdsoKrBEeOf1O9AMTn6UA"/>
+              <ownedAttribute xmi:id="_4lXKEKrBEeOf1O9AMTn6UA" name="installmentType" type="_4jStgKrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Enumeration" xmi:id="_4jStgKrBEeOf1O9AMTn6UA" name="InstallmentType">
+              <ownedAttribute xmi:id="_4lee0KrBEeOf1O9AMTn6UA" name="value" visibility="package">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_4jZbMKrBEeOf1O9AMTn6UA" name="InstallmentType" visibility="private" method="_4lr6MKrBEeOf1O9AMTn6UA">
+                <eAnnotations xmi:id="_4jZbMqrBEeOf1O9AMTn6UA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <details xmi:id="_4jaCQKrBEeOf1O9AMTn6UA" key="create"/>
+                </eAnnotations>
+                <ownedParameter xmi:id="_4jZbMarBEeOf1O9AMTn6UA" name="value">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_4jaCQarBEeOf1O9AMTn6UA" type="_4jStgKrBEeOf1O9AMTn6UA" direction="return"/>
+              </ownedOperation>
+              <ownedLiteral xmi:id="_4jTUkKrBEeOf1O9AMTn6UA" name="FIRST">
+                <specification xmi:type="uml:Expression" xmi:id="_4jT7oKrBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4ltvYKrBEeOf1O9AMTn6UA" value="1"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jT7oarBEeOf1O9AMTn6UA" name="SECOND">
+                <specification xmi:type="uml:Expression" xmi:id="_4jT7oqrBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4ltvYarBEeOf1O9AMTn6UA" value="2"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jT7o6rBEeOf1O9AMTn6UA" name="THIRD">
+                <specification xmi:type="uml:Expression" xmi:id="_4jT7pKrBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4ltvYqrBEeOf1O9AMTn6UA" value="3"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jUisKrBEeOf1O9AMTn6UA" name="FOURTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jUisarBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4ltvY6rBEeOf1O9AMTn6UA" value="4"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jUisqrBEeOf1O9AMTn6UA" name="FIFTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jUis6rBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWcKrBEeOf1O9AMTn6UA" value="5"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jUitKrBEeOf1O9AMTn6UA" name="SIXTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jUitarBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWcarBEeOf1O9AMTn6UA" value="6"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jUitqrBEeOf1O9AMTn6UA" name="SEVENTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jUit6rBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWcqrBEeOf1O9AMTn6UA" value="7"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jVJwKrBEeOf1O9AMTn6UA" name="EIGHT">
+                <specification xmi:type="uml:Expression" xmi:id="_4jVJwarBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWc6rBEeOf1O9AMTn6UA" value="8"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jVJwqrBEeOf1O9AMTn6UA" name="NINTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jVJw6rBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWdKrBEeOf1O9AMTn6UA" value="9"/>
+                </specification>
+              </ownedLiteral>
+              <ownedLiteral xmi:id="_4jVJxKrBEeOf1O9AMTn6UA" name="TENTH">
+                <specification xmi:type="uml:Expression" xmi:id="_4jVJxarBEeOf1O9AMTn6UA">
+                  <operand xmi:type="uml:LiteralString" xmi:id="_4luWdarBEeOf1O9AMTn6UA" value="10"/>
+                </specification>
+              </ownedLiteral>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_4jdsoKrBEeOf1O9AMTn6UA" name="Payment">
+              <ownedAttribute xmi:id="_4lfF4arBEeOf1O9AMTn6UA" name="paymentID">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4lfs8arBEeOf1O9AMTn6UA" name="paymentDetails" type="_4jhXAKrBEeOf1O9AMTn6UA" aggregation="composite" association="_4luWdqrBEeOf1O9AMTn6UA">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_4lgUAKrBEeOf1O9AMTn6UA" value="null"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4lgUAarBEeOf1O9AMTn6UA" name="paymentStatus" type="_4jpS0KrBEeOf1O9AMTn6UA">
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_4lklcarBEeOf1O9AMTn6UA" value="PaymentStatus.UNPAID"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4llMgKrBEeOf1O9AMTn6UA" name="paymentMode" type="_4kxUMarBEeOf1O9AMTn6UA" association="_4ltIUKrBEeOf1O9AMTn6UA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4llMgarBEeOf1O9AMTn6UA"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4llzkKrBEeOf1O9AMTn6UA" name="paymentComment">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                <defaultValue xmi:type="uml:LiteralString" xmi:id="_4llzkarBEeOf1O9AMTn6UA" value="&quot;No comments&quot;"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4llzk6rBEeOf1O9AMTn6UA" name="student" type="_4k0-karBEeOf1O9AMTn6UA" association="_4ltIU6rBEeOf1O9AMTn6UA">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4lmaoKrBEeOf1O9AMTn6UA"/>
+              </ownedAttribute>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_4jhXAKrBEeOf1O9AMTn6UA" name="PaymentDetails">
+              <ownedAttribute xmi:id="_4lmaoarBEeOf1O9AMTn6UA" name="proposedDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+              <ownedAttribute xmi:id="_4lpd8KrBEeOf1O9AMTn6UA" name="paymentDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+              <ownedAttribute xmi:id="_4lqFBKrBEeOf1O9AMTn6UA" name="proposedAmount">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4lqsEarBEeOf1O9AMTn6UA" name="depositedAmount">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_4lqsE6rBEeOf1O9AMTn6UA" name="timeStamp" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Enumeration" xmi:id="_4jpS0KrBEeOf1O9AMTn6UA" name="PaymentStatus">
+              <ownedLiteral xmi:id="_4jpS0arBEeOf1O9AMTn6UA" name="FULLPAID"/>
+              <ownedLiteral xmi:id="_4jp54KrBEeOf1O9AMTn6UA" name="REGISTRATIONPAID"/>
+              <ownedLiteral xmi:id="_4jp54arBEeOf1O9AMTn6UA" name="UNPAID"/>
+              <ownedLiteral xmi:id="_4jp54qrBEeOf1O9AMTn6UA" name="PAID"/>
+              <ownedLiteral xmi:id="_4jp546rBEeOf1O9AMTn6UA" name="FIRSTPAID"/>
+              <ownedLiteral xmi:id="_4jp55KrBEeOf1O9AMTn6UA" name="SECONDPAID"/>
+              <ownedLiteral xmi:id="_4jp55arBEeOf1O9AMTn6UA" name="THIRDPAID"/>
+              <ownedLiteral xmi:id="_4jp55qrBEeOf1O9AMTn6UA" name="FOURTHPAID"/>
+              <ownedLiteral xmi:id="_4jp556rBEeOf1O9AMTn6UA" name="FIFTHPAID"/>
+              <ownedLiteral xmi:id="_4jqg8KrBEeOf1O9AMTn6UA" name="SIXTHPAID"/>
+              <ownedLiteral xmi:id="_4jqg8arBEeOf1O9AMTn6UA" name="SEVENTHPAID"/>
+              <ownedLiteral xmi:id="_4jqg8qrBEeOf1O9AMTn6UA" name="EIGHTHPAID"/>
+              <ownedLiteral xmi:id="_4jqg86rBEeOf1O9AMTn6UA" name="NINTHPAID"/>
+              <ownedLiteral xmi:id="_4jqg9KrBEeOf1O9AMTn6UA" name="TENTHPAID"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_4jqg9arBEeOf1O9AMTn6UA" name="RegistrationPayment">
+              <generalization xmi:id="_4lOnMKrBEeOf1O9AMTn6UA" general="_4jdsoKrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_4ltIUKrBEeOf1O9AMTn6UA" name="" memberEnd="_4llMgKrBEeOf1O9AMTn6UA _4lshRqrBEeOf1O9AMTn6UA">
+              <ownedEnd xmi:id="_4lshRqrBEeOf1O9AMTn6UA" name="" type="_4jdsoKrBEeOf1O9AMTn6UA" association="_4ltIUKrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_4ltIU6rBEeOf1O9AMTn6UA" name="" memberEnd="_4llzk6rBEeOf1O9AMTn6UA _4ltIUarBEeOf1O9AMTn6UA">
+              <ownedEnd xmi:id="_4ltIUarBEeOf1O9AMTn6UA" name="" type="_4jdsoKrBEeOf1O9AMTn6UA" association="_4ltIU6rBEeOf1O9AMTn6UA">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4ltIUqrBEeOf1O9AMTn6UA" value="*"/>
+              </ownedEnd>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_4luWdqrBEeOf1O9AMTn6UA" name="" memberEnd="_4lfs8arBEeOf1O9AMTn6UA _4luWd6rBEeOf1O9AMTn6UA">
+              <ownedEnd xmi:id="_4luWd6rBEeOf1O9AMTn6UA" name="" type="_4jdsoKrBEeOf1O9AMTn6UA" association="_4luWdqrBEeOf1O9AMTn6UA"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_6bgMUKrBEeOf1O9AMTn6UA" name="NewClass1"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_4jBAsKrBEeOf1O9AMTn6UA" name="payMode">
+            <packagedElement xmi:type="uml:Class" xmi:id="_4kxUMarBEeOf1O9AMTn6UA" name="PaymentMode"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_4jBnwKrBEeOf1O9AMTn6UA" name="student">
+            <packagedElement xmi:type="uml:Class" xmi:id="_4k0-karBEeOf1O9AMTn6UA" name="Student"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_4jF5MqrBEeOf1O9AMTn6UA" name="exceptions">
+            <packagedElement xmi:type="uml:Class" xmi:id="_4lIgkarBEeOf1O9AMTn6UA" name="DateException"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4i5r8KrBEeOf1O9AMTn6UA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4i5r8arBEeOf1O9AMTn6UA" name="persistence">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4kK3QKrBEeOf1O9AMTn6UA" name="Entity"/>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_4kPIsKrBEeOf1O9AMTn6UA" name="EnumType"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4kSzEarBEeOf1O9AMTn6UA" name="Enumerated"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4kau4KrBEeOf1O9AMTn6UA" name="Embedded"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4keZQarBEeOf1O9AMTn6UA" name="GeneratedValue"/>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_4kiDoarBEeOf1O9AMTn6UA" name="GenerationType"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4km8IarBEeOf1O9AMTn6UA" name="Id"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4kqmgarBEeOf1O9AMTn6UA" name="ManyToOne"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4kuQ4arBEeOf1O9AMTn6UA" name="OneToOne"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4k-IgKrBEeOf1O9AMTn6UA" name="Embeddable"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4lBL0arBEeOf1O9AMTn6UA" name="Temporal"/>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_4lE2MarBEeOf1O9AMTn6UA" name="TemporalType"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4jF5MKrBEeOf1O9AMTn6UA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4jF5MarBEeOf1O9AMTn6UA" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_4k6eIKrBEeOf1O9AMTn6UA" name="Date"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_4dIbIKrBEeOf1O9AMTn6UA">
+      <eAnnotations xmi:id="_4dIbIarBEeOf1O9AMTn6UA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+    <profileApplication xmi:id="_4jPqMKrBEeOf1O9AMTn6UA">
+      <eAnnotations xmi:id="_4jPqMarBEeOf1O9AMTn6UA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2-Annotation-Persistency"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_4dIbIqrBEeOf1O9AMTn6UA" base_Package="_4VBoAKrBEeOf1O9AMTn6UA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <Persistency:JPA1StyledElement xmi:id="_4jPqMqrBEeOf1O9AMTn6UA" base_Element="_4jPDIKrBEeOf1O9AMTn6UA"/>
+  <Persistency:JPA1StyledElement xmi:id="_4jRfYKrBEeOf1O9AMTn6UA" base_Element="_4jQ4UarBEeOf1O9AMTn6UA"/>
+  <Persistency:JPA1StyledElement xmi:id="_4jeTsKrBEeOf1O9AMTn6UA" base_Element="_4jdsoKrBEeOf1O9AMTn6UA"/>
+  <Persistency:PersistentPart xmi:id="_4jlBYKrBEeOf1O9AMTn6UA" base_Class="_4jhXAKrBEeOf1O9AMTn6UA"/>
+  <Persistency:JPA1StyledElement xmi:id="_4jlBYarBEeOf1O9AMTn6UA" base_Element="_4jhXAKrBEeOf1O9AMTn6UA"/>
+  <Persistency:JPA1StyledElement xmi:id="_4jrIAKrBEeOf1O9AMTn6UA" base_Element="_4jqg9arBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kOhoKrBEeOf1O9AMTn6UA" base_Element="_4kK3QKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kSzEKrBEeOf1O9AMTn6UA" base_Element="_4kPIsKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kWdcKrBEeOf1O9AMTn6UA" base_Element="_4kSzEarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4keZQKrBEeOf1O9AMTn6UA" base_Element="_4kau4KrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kiDoKrBEeOf1O9AMTn6UA" base_Element="_4keZQarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4km8IKrBEeOf1O9AMTn6UA" base_Element="_4kiDoarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kqmgKrBEeOf1O9AMTn6UA" base_Element="_4km8IarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kuQ4KrBEeOf1O9AMTn6UA" base_Element="_4kqmgarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4kxUMKrBEeOf1O9AMTn6UA" base_Element="_4kuQ4arBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4k0-kKrBEeOf1O9AMTn6UA" base_Element="_4kxUMarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4k4o8KrBEeOf1O9AMTn6UA" base_Element="_4k0-karBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4k9hcKrBEeOf1O9AMTn6UA" base_Element="_4k6eIKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4lBL0KrBEeOf1O9AMTn6UA" base_Element="_4k-IgKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4lE2MKrBEeOf1O9AMTn6UA" base_Element="_4lBL0arBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4lIgkKrBEeOf1O9AMTn6UA" base_Element="_4lE2MarBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:Reference xmi:id="_4lLj4KrBEeOf1O9AMTn6UA" base_Element="_4lIgkarBEeOf1O9AMTn6UA"/>
+  <Persistency:EnumerationStyleMapping xmi:id="_4la0cKrBEeOf1O9AMTn6UA" base_Property="_4lXKEKrBEeOf1O9AMTn6UA" style="STRING"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4lfF4KrBEeOf1O9AMTn6UA" base_Element="_4lee0KrBEeOf1O9AMTn6UA"/>
+  <Persistency:PrimaryKey xmi:id="_4lfF4qrBEeOf1O9AMTn6UA" base_Property="_4lfF4arBEeOf1O9AMTn6UA"/>
+  <Persistency:GeneratedValueMapping xmi:id="_4lfs8KrBEeOf1O9AMTn6UA" base_Property="_4lfF4arBEeOf1O9AMTn6UA"/>
+  <Persistency:EnumerationStyleMapping xmi:id="_4lklcKrBEeOf1O9AMTn6UA" base_Property="_4lgUAarBEeOf1O9AMTn6UA" style="STRING"/>
+  <UMLLabProfile:StyledElement xmi:id="_4llzkqrBEeOf1O9AMTn6UA" base_Element="_4llzkKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4lnBsKrBEeOf1O9AMTn6UA" base_Element="_4lmaoarBEeOf1O9AMTn6UA">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4lnBsarBEeOf1O9AMTn6UA" name="getProposedDate" method="_4lr6M6rBEeOf1O9AMTn6UA">
+      <ownedParameter xmi:id="_4lnowarBEeOf1O9AMTn6UA" type="_4k6eIKrBEeOf1O9AMTn6UA" direction="return"/>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4lnBsqrBEeOf1O9AMTn6UA" name="setProposedDate" method="_4lshQKrBEeOf1O9AMTn6UA" raisedException="_4lIgkarBEeOf1O9AMTn6UA">
+      <ownedParameter xmi:id="_4lnowKrBEeOf1O9AMTn6UA" name="proposedDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_4loP0KrBEeOf1O9AMTn6UA" base_Element="_4lmaoarBEeOf1O9AMTn6UA">
+    <annotations xmi:id="_4lo24KrBEeOf1O9AMTn6UA" name="Temporal">
+      <annotationParameters xmi:id="_4lo24arBEeOf1O9AMTn6UA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_4lu9gKrBEeOf1O9AMTn6UA" value="TemporalType.DATE"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4lpd8arBEeOf1O9AMTn6UA" base_Element="_4lpd8KrBEeOf1O9AMTn6UA">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4lpd8qrBEeOf1O9AMTn6UA" name="getPaymentDate" method="_4lshQqrBEeOf1O9AMTn6UA">
+      <ownedParameter xmi:id="_4lqFAKrBEeOf1O9AMTn6UA" type="_4k6eIKrBEeOf1O9AMTn6UA" direction="return"/>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_4lpd86rBEeOf1O9AMTn6UA" name="setPaymentDate" method="_4lshRKrBEeOf1O9AMTn6UA" raisedException="_4lIgkarBEeOf1O9AMTn6UA">
+      <ownedParameter xmi:id="_4lpd9KrBEeOf1O9AMTn6UA" name="paymentDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:Annotations xmi:id="_4lqFAarBEeOf1O9AMTn6UA" base_Element="_4lpd8KrBEeOf1O9AMTn6UA">
+    <annotations xmi:id="_4lqFAqrBEeOf1O9AMTn6UA" name="Temporal">
+      <annotationParameters xmi:id="_4lqFA6rBEeOf1O9AMTn6UA" skipName="true" skipArray="true">
+        <valueSpecifications xmi:type="uml:LiteralString" xmi:id="_4lu9garBEeOf1O9AMTn6UA" value="TemporalType.DATE"/>
+      </annotationParameters>
+    </annotations>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:StyledElement xmi:id="_4lqsEKrBEeOf1O9AMTn6UA" base_Element="_4lqFBKrBEeOf1O9AMTn6UA"/>
+  <UMLLabProfile:StyledElement xmi:id="_4lqsEqrBEeOf1O9AMTn6UA" base_Element="_4lqsEarBEeOf1O9AMTn6UA"/>
+  <Persistency:Temporal xmi:id="_4lqsFKrBEeOf1O9AMTn6UA" base_Property="_4lqsE6rBEeOf1O9AMTn6UA" temporalType="TIMESTAMP"/>
+  <uml:OpaqueBehavior xmi:id="_4lr6MKrBEeOf1O9AMTn6UA" name="InstallmentType" specification="_4jZbMKrBEeOf1O9AMTn6UA">
+    <ownedParameter xmi:id="_4lr6MarBEeOf1O9AMTn6UA" name="value">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedParameter>
+    <ownedParameter xmi:id="_4lr6MqrBEeOf1O9AMTn6UA" type="_4jStgKrBEeOf1O9AMTn6UA" direction="return"/>
+    <language>java</language>
+    <body>this.value = value;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4lr6M6rBEeOf1O9AMTn6UA" name="getProposedDate" specification="_4lnBsarBEeOf1O9AMTn6UA">
+    <ownedParameter xmi:id="_4lr6NKrBEeOf1O9AMTn6UA" type="_4k6eIKrBEeOf1O9AMTn6UA" direction="return"/>
+    <language>java</language>
+    <body>return proposedDate;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4lshQKrBEeOf1O9AMTn6UA" name="setProposedDate" specification="_4lnBsqrBEeOf1O9AMTn6UA">
+    <ownedParameter xmi:id="_4lshQarBEeOf1O9AMTn6UA" name="proposedDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+    <language>java</language>
+    <body>if (proposedDate.after(new Date())) {&#xD;
+			this.proposedDate = proposedDate;&#xD;
+		} else {&#xD;
+			throw new DateException(&#xD;
+					&quot;Proposed Date cannot be before todays date .&quot;);&#xD;
+		}&#xD;
+&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4lshQqrBEeOf1O9AMTn6UA" name="getPaymentDate" specification="_4lpd8qrBEeOf1O9AMTn6UA">
+    <ownedParameter xmi:id="_4lshQ6rBEeOf1O9AMTn6UA" type="_4k6eIKrBEeOf1O9AMTn6UA" direction="return"/>
+    <language>java</language>
+    <body>return paymentDate;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_4lshRKrBEeOf1O9AMTn6UA" name="setPaymentDate" specification="_4lpd86rBEeOf1O9AMTn6UA">
+    <ownedParameter xmi:id="_4lshRarBEeOf1O9AMTn6UA" name="paymentDate" type="_4k6eIKrBEeOf1O9AMTn6UA"/>
+    <language>java</language>
+    <body>if (paymentDate.after(new Date())) {&#xD;
+			this.paymentDate = paymentDate;&#xD;
+		} else {&#xD;
+			throw new DateException(&#xD;
+					&quot;Payment Date cannot be before todays date .&quot;);&#xD;
+		}&#xD;
+&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+</xmi:XMI>

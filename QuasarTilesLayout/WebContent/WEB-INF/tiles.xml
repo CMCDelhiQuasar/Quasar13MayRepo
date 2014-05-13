@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="layout.def" template="/layout.jsp">
+		<put-attribute name="title" value="www.quasar.com"
+			type="string" />
+		<put-attribute name="header" value="/header.jsp" />
+		<put-attribute name="sideMenu" value="/sideMenu.jsp" />
+		<put-attribute name="body" value="/welcome.jsp" />
+		<put-attribute name="footer" value="/footer.jsp" />
+	</definition>
+</tiles-definitions>

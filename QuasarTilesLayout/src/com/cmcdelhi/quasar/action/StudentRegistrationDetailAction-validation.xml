@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+    "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="studentname">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>Student Name Required!</message>
+		</field-validator>
+	</field>
+
+	<field name="studentemail">
+		<field-validator type="requiredstring">
+			<message>Please Enter Student Email!</message>
+		</field-validator>
+		<field-validator type="email">
+			<param name="trim">true</param>
+			<message>Please Enter Valid Email Address!</message>
+		</field-validator>
+	</field>
+	<field name="contact">
+		<field-validator type="long">
+			<param name="trim">true</param>
+			<param name="min">0</param>
+			<param name="max">9999999999</param>
+			<message>Please enter valid contact number!</message>
+		</field-validator>
+	</field>
+	<field name="coursename">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[coursename!="Select"]]></param>
+			<message>Please Select Valid Course!!</message>
+		</field-validator>
+	</field>
+	<field name="coursefee">
+		<field-validator type="long">
+			<param name="trim">true</param>
+			<param name="min">0</param>
+			<param name="max">150000</param>
+			<message>Enter Fee Between ${min} and ${max}</message>
+		</field-validator>
+	</field>
+
+	<field name="servicetax">
+		<field-validator type="double">
+			<param name="trim">true</param>
+			<param name="minExclusive">0</param>
+			<param name="maxExclusive">100.0</param>
+			<message>Enter Service Tax Between ${minExclusive} and
+				${maxExclusive}
+			</message>
+		</field-validator>
+	</field>
+	<field name="discount">
+		<field-validator type="double">
+			<param name="trim">true</param>
+			<param name="minExclusive">0</param>
+			<param name="maxExclusive">100.0</param>
+			<message>Enter Discount Between ${minExclusive} and ${maxExclusive}
+			</message>
+		</field-validator>
+	</field>
+
+	<field name="fine">
+		<field-validator type="long">
+			<param name="trim">true</param>
+			<param name="min">0</param>
+			<param name="max">1500</param>
+			<message>Enter fine Between ${min} and ${max}</message>
+		</field-validator>
+
+	</field>
+	<field name="totalinstallments">
+		<field-validator type="int">
+			<param name="trim">true</param>
+			<param name="min">2</param>
+			<param name="max">10</param>
+			<message>Enter Installments Between ${min} and ${max}</message>
+		</field-validator>
+	</field>
+
+	<field name="registrationamount">
+		<field-validator type="long">
+			<param name="trim">true</param>
+			<param name="min">1000</param>
+			<param name="max">150000</param>
+			<message>Enter Registration Between ${min} and ${max}</message>
+		</field-validator>
+	</field>
+</validators>
