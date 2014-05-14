@@ -80,7 +80,8 @@
 			<result name="input">/ddmodewrapper.jsp</result>
 		</action>
 		<action name="cardmode" class="com.cmcdelhi.quasar.action.CardModeAction">
-			<result name="success">/registrationconfirmationwrapper.jsp</result>
+			<result name="success_reg">/registrationconfirmationwrapper.jsp</result>
+			<result name="success_due">/dueconfirmation.jsp</result>
 			<result name="input">/cardmodewrapper.jsp</result>
 		</action>
 		<action name="onlinemode" class="com.cmcdelhi.quasar.action.OnlineModeAction">
@@ -132,13 +133,20 @@
 		<action name="globalsearch" class="com.cmcdelhi.quasar.action.GlobalSearchAction">
 			<result name="success">/searchresultwrapper.jsp</result>
 			<result name="failure">/failure.jsp</result>
-	
+
 		</action>
 
 		<action name="studentdeletion" class="com.cmcdelhi.quasar.action.DeleteStudentAction">
 			<result name="success">/deletestudentwrapper.jsp</result>
 			<result name="failure">/failure.jsp</result>
 			<result name="input">/deletestudentwrapper.jsp</result>
+		</action>
+
+
+		<action name="perpareDuePayment"
+			class="com.cmcdelhi.quasar.action.PrepareDuePaymentAction">
+			<result name="success">/paymentwrapper.jsp</result>
+			<result name="failure">/failure.jsp</result>
 		</action>
 
 

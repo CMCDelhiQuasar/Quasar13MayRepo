@@ -124,7 +124,9 @@
 
 				out.println("<br> Payment ID    :  " + ffp.getPaymentID());
 				out.println("<br> <font color='red'> Payment Status    :  "
-						+ ffp.getPaymentStatus() + "</font>");
+						+ ffp.getPaymentStatus()
+						+ "</font>  <a href='perpareDuePayment?paymentId="
+						+ ffp.getPaymentID() + "'>PAY NOW </a>");
 
 			} else if (p instanceof InstallmentPayment) {
 
@@ -133,7 +135,9 @@
 				out.println("<br>  <h3>" + ip.getInstallmentType()
 						+ " Intsallment </h3> ");
 				out.println("<font color='red'> Payment Status     :  "
-						+ ip.getPaymentStatus() + "</font>");
+						+ ip.getPaymentStatus()
+						+ "</font>  <a href='perpareDuePayment?paymentId="
+						+ ip.getPaymentID() + "'>PAY NOW </a>");
 
 				out.println("<br> Payment ID    :  " + ip.getPaymentID());
 

@@ -29,9 +29,8 @@ public class CardModeAction extends ActionSupport implements
 	private Date cardExpiryDate;
 
 	HttpServletRequest request;
-	
-	
-	//Simple 
+
+	// Simple
 
 	// this is the same session maintained throughout the student registration.
 	Map registrationSessionMap;
@@ -47,6 +46,15 @@ public class CardModeAction extends ActionSupport implements
 			return "nosession";
 		} else {
 			try {
+
+				// searching for whether is this registration paymnent or due
+				// payment
+				String dueTag = (String) registrationSessionMap.get("DUE_TAG");
+				if (dueTag == null) {
+					System.out.println("This is regisatrion payment ");
+				} else {
+					System.out.println("This is Due Payment  " + dueTag);
+				}
 
 				// if available then fetch the student object
 				Student loadedStudent = (Student) registrationSessionMap
@@ -74,7 +82,14 @@ public class CardModeAction extends ActionSupport implements
 					System.out.println(paramName + "  :  " + paramValue);
 				}
 
-				return SUCCESS;
+				// if regisatrion payment then go to Registartion Action else Go
+				// to Due Payment Action
+				if (dueTag == null) {
+					return SUCCESS + "_reg";
+				} else {
+					return SUCCESS + "_due";
+				}
+
 			} catch (Exception e) {
 				System.out.println("Exception " + e.getMessage());
 			}

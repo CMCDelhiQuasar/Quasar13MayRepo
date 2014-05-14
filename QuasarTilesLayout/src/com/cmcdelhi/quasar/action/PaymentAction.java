@@ -51,6 +51,15 @@ public class PaymentAction extends ActionSupport implements
 		} else {
 			try {
 
+				// searching for whether is this registration paymnent or due
+				// payment
+				String dueTag = (String) registrationSessionMap.get("DUE_TAG");
+				if (dueTag == null) {
+					System.out.println("This is regisatrion payment ");
+				} else {
+					System.out.println("This is Due Payment  " + dueTag);
+				}
+
 				// if available then fetch the student object
 				Student loadedStudent = (Student) registrationSessionMap
 						.get("shagird");
