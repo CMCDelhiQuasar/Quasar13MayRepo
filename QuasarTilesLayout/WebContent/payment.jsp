@@ -78,7 +78,33 @@
 	</s:if>
 	<s:else>
 
-		<table border="0" id="studentdetail">
+		<!-- Check if Payment is of Due Payment of Registration Payment -->
+
+		<s:if test="#session.DUE_TAG==null">
+			<div align="right">
+				<h1>Registration Payment</h1>
+
+				<s:set var="pa"
+					value="#session.shagird.paymentsList.get(0).paymentDetails.proposedAmount" />
+
+			</div>
+
+		</s:if>
+		<s:else>
+			<div align="right">
+				<h1>
+					<s:property value="#session.DUE_TAG" />
+
+					<s:set var="pa" value="#session.payment" />
+
+				</h1>
+
+			</div>
+		</s:else>
+
+
+
+		<table border="1" id="studentdetail">
 			<tr>
 				<td colspan="4"><h2>Payment Configuration For</h2></td>
 				<td width="130"></td>
@@ -108,7 +134,7 @@
 			</tr>
 			<s:iterator var="p" status="i" value="#session.shagird.paymentsList">
 				<tr>
-					<td>Installment Payment</td>
+					<td>Installment Payment / REgistartion</td>
 					<td><s:property value="#i.index" /></td>
 				</tr>
 
@@ -124,6 +150,8 @@
 					<td>Payment Comment:-</td>
 					<td><s:property value="#p.paymentComment" /></td>
 				</tr>
+
+
 			</s:iterator>
 		</table>
 
@@ -132,15 +160,15 @@
 	<h1>Payment Page</h1>
 	<s:form name="regpayment" theme="simple" method="post" action="payment"
 		onsubmit="return true">
-		<s:set var="pa"
-			value="#session.shagird.paymentsList.get(0).paymentDetails.proposedAmount" />
+
+
 		<br />
 		<table border="0">
 			<tr>
 				<td width="100"><s:label value="Proposed Amount" /></td>
 				<td><s:textfield label="Proposed Amount" labelSeparator=""
-						labelposition="left" name="proposedAmount" value="%{#pa}"
-						disabled="true" /></td>
+						labelposition="left" name="proposedAmount"
+						value="%{#pa.paymentDetails.proposedAmount}" disabled="true" /></td>
 				<td><s:fielderror fieldName="proposedAmount" /></td>
 			</tr>
 
@@ -154,7 +182,8 @@
 				<td><s:label value="ProposedDate" /></td>
 				<td><sj:datepicker name="proposedDate" displayFormat="dd/mm/yy"
 						changeMonth="true" changeYear="true" label="Proposed Date"
-						labelposition="left" minDate="d" /></td>
+						labelposition="left" minDate="d"
+						value="%{#pa.paymentDetails.proposedDate}"  /></td>
 				<td><s:fielderror fieldName="proposedDate" /></td>
 			</tr>
 			<tr>

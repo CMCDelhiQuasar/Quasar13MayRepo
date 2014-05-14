@@ -149,6 +149,13 @@
 			<result name="failure">/failure.jsp</result>
 		</action>
 
+		<action name="payDuePayment" class="com.cmcdelhi.quasar.action.DuePaymentAction">
+			<result name="success">/duepaymentsuccess.jsp</result>
+			<result name="failure">/failure.jsp</result>
+			<result name="nosession">/registration.jsp</result>
+		</action>
+
+
 
 
 	</package>

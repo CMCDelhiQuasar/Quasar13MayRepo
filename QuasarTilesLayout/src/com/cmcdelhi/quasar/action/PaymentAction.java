@@ -3,7 +3,6 @@
  */
 package com.cmcdelhi.quasar.action;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Map;
@@ -14,6 +13,7 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.cmcdelhi.quasar.exceptions.DateException;
+import com.cmcdelhi.quasar.paymentDetails.Payment;
 import com.cmcdelhi.quasar.paymentDetails.PaymentStatus;
 import com.cmcdelhi.quasar.student.Student;
 import com.opensymphony.xwork2.ActionSupport;
@@ -51,45 +51,42 @@ public class PaymentAction extends ActionSupport implements
 		} else {
 			try {
 
+				// if available then fetch the student object
+				Student loadedStudent = (Student) registrationSessionMap
+						.get("shagird");
+
+				Payment p = null;
 				// searching for whether is this registration paymnent or due
 				// payment
 				String dueTag = (String) registrationSessionMap.get("DUE_TAG");
 				if (dueTag == null) {
 					System.out.println("This is regisatrion payment ");
+					p = loadedStudent.getPaymentsList().get(0);
 				} else {
+					p = (Payment) registrationSessionMap.get("payment");
 					System.out.println("This is Due Payment  " + dueTag);
 				}
-
-				// if available then fetch the student object
-				Student loadedStudent = (Student) registrationSessionMap
-						.get("shagird");
 
 				System.out.println("Size : "
 						+ loadedStudent.getPaymentsList().size());
 
 				// setting the registration payment comment
-				loadedStudent.getPaymentsList().get(0)
-						.setPaymentComment(comments);
+				p.setPaymentComment(comments);
 
 				// setting the registration payment deposited amount
-				loadedStudent.getPaymentsList().get(0).getPaymentDetails()
-						.setDepositedAmount(depositedAmount);
+				p.getPaymentDetails().setDepositedAmount(depositedAmount);
 
 				// setting the registration payment proposed date
-				loadedStudent.getPaymentsList().get(0).getPaymentDetails()
-						.setProposedDate(proposedDate);
+				p.getPaymentDetails().setProposedDate(proposedDate);
 
 				// setting the registration payment deposited amount
-				loadedStudent.getPaymentsList().get(0).getPaymentDetails()
-						.setPaymentDate(paymentDate);
+				p.getPaymentDetails().setPaymentDate(paymentDate);
 
 				// setting the registration payment time stamp
-				loadedStudent.getPaymentsList().get(0).getPaymentDetails()
-						.setTimeStamp(new Date());
+				p.getPaymentDetails().setTimeStamp(new Date());
 
 				// setting the reg istration payment payment status
-				loadedStudent.getPaymentsList().get(0)
-						.setPaymentStatus(PaymentStatus.PAID);
+				p.setPaymentStatus(PaymentStatus.PAID);
 
 				loadedStudent.setPaymentStatus(PaymentStatus.REGISTRATIONPAID);
 
