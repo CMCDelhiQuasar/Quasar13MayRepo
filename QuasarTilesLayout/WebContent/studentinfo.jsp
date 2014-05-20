@@ -19,6 +19,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style type="text/css">
+#studentdetail; {
+	background-color: white;
+	font-family: sans-serif;
+	padding: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 4px 6px -5px rgba(0, 0, 0, 0.8);
+	padding: 10px;
+}
+</style>
 <sj:head jqueryui="true" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
@@ -97,123 +111,143 @@
 
 	</table>
 
-
 	<hr>
-
 
 	<%
 		Student stu = (Student) request.getAttribute("student");
 
-		out.println("get Attribute  Name   : " + stu.getName());
+		//out.println("get Attribute  Name   : " + stu.getName());
 
 		for (Payment p : stu.getPaymentsList()) {
 
 			if (p instanceof RegistrationPayment) {
-				out.println("<br>  <h3> Payment   :  Registration</h3>");
+				out.println(" <table border='0' id='studentdetail' ><tr><td> <h3> Payment   :  Registration</h3></td></tr>");
 
 				RegistrationPayment rp = (RegistrationPayment) p;
 
-				out.println("<br> Payment ID   :  " + rp.getPaymentID());
-				out.println("<br> <font color='red'> Payment Status    :  "
-						+ rp.getPaymentStatus() + "</font>");
+				out.println("<tr><td> Payment ID   :  </td><td>"
+						+ rp.getPaymentID() + "</td></tr>");
+				out.println("<tr><td> Payment Status    :  </td><td>"
+						+ rp.getPaymentStatus() + "</td></tr></table>");
 
 			} else if (p instanceof FullFeePayment) {
 				FullFeePayment ffp = (FullFeePayment) p;
 
-				out.println("<br> <h3>  Fullfee Payment </h3> ");
+				out.println("<table border='0' id='studentdetail'><tr><td> <h3>  Fullfee Payment </h3></td></tr> ");
 
-				out.println("<br> Payment ID    :  " + ffp.getPaymentID());
-				out.println("<br> <font color='red'> Payment Status    :  "
-						+ ffp.getPaymentStatus()
-						+ "</font>  <a href='perpareDuePayment?paymentId="
-						+ ffp.getPaymentID() + "'>PAY NOW </a>");
+				out.println("<tr><td> Payment ID    :  </td><td>"
+						+ ffp.getPaymentID() + "</td></tr>");
+				out.println("<tr><td> Payment Status    :  </td><td>"
+						+ ffp.getPaymentStatus() + "</td><td>"
+						+ " <a href='perpareDuePayment?paymentId="
+						+ ffp.getPaymentID()
+						+ "'>PAY NOW </a></td></tr></table>");
 
 			} else if (p instanceof InstallmentPayment) {
 
 				InstallmentPayment ip = (InstallmentPayment) p;
 
-				out.println("<br>  <h3>" + ip.getInstallmentType()
-						+ " Intsallment </h3> ");
-				out.println("<font color='red'> Payment Status     :  "
+				out.println("<table border='0' id='studentdetail'><tr><td> <h3>"
+						+ ip.getInstallmentType()
+						+ " Intsallment </h3> </td></tr>");
+				out.println("<tr><td><font '> Payment Status     : </td><td>"
 						+ ip.getPaymentStatus()
-						+ "</font>  <a href='perpareDuePayment?paymentId="
-						+ ip.getPaymentID() + "'>PAY NOW </a>");
+						+ "</font> <a href='perpareDuePayment?paymentId="
+						+ ip.getPaymentID() + "'>PAY NOW </a></td></tr>");
 
-				out.println("<br> Payment ID    :  " + ip.getPaymentID());
+				out.println("<br><tr><td> Payment ID    :  </td><td>"
+						+ ip.getPaymentID());
+				out.println("</td></tr></table>");
 
 			} else {
 
 			}
 
 			///General Payment Details
-			out.println("<br> Prposed Amount   :  "
-					+ p.getPaymentDetails().getProposedAmount());
-			out.println("<br> Deposited Amount   :  "
-					+ p.getPaymentDetails().getDepositedAmount());
-			out.println("<br> Prposed Date   :  "
-					+ p.getPaymentDetails().getProposedDate());
+			out.println("<table border='0' id='studentdetail'><tr><td> Prposed Amount   :  </td><td>"
+					+ p.getPaymentDetails().getProposedAmount()
+					+ "</td></tr>");
+			out.println("<tr><td> Deposited Amount   :  </td><td>"
+					+ p.getPaymentDetails().getDepositedAmount()
+					+ "</td></tr>");
+			out.println(" <tr><td> Prposed Date   :  </td><td>"
+					+ p.getPaymentDetails().getProposedDate()
+					+ "</td></tr>");
 			if (p.getPaymentDetails().getPaymentDate() != null) {
-				out.println("<br> Payment Date   :  "
-						+ p.getPaymentDetails().getPaymentDate());
+				out.println("<tr><td> Payment Date   :  </td><td>"
+						+ p.getPaymentDetails().getPaymentDate()
+						+ "</td></tr>");
 			} else {
-				out.println("<br> Payment Date   :  N/A ");
+				out.println(" <tr><td> Payment Date   :  </td><td>N/A </td></tr>");
 			}
 
-			out.println("<br> ");
+			out.println(" </table>");
 
 			//Checking for Mode of Payment
 			PaymentMode pm = p.getPaymentMode();
 
 			if (pm instanceof CashMode) {
 
-				out.println("<b> Payment Mode : Cash Mode <b>");
+				out.println("<table border='0' id='studentdetail'><tr><td><b> Payment Mode </b></td>: <td>Cash Mode</td></tr>");
 
 				CashMode cm = (CashMode) pm;
-				out.println("<br> Cash Amount " + cm.getCashAmount());
-				out.println("<br> Cash Details ");
+				out.println("<tr><td><b> Cash Amount </b></td><td>"
+						+ cm.getCashAmount() + "</td></tr>");
+				out.println("<tr><td> <b>Cash Details</b> </td></tr>");
 
 				for (Note n : cm.getCashDetail().keySet()) {
-					out.println("<br> " + n + "  : "
-							+ cm.getCashDetail().get(n));
+					out.println("<tr><td><b> " + n + " </b></td><td> : "
+							+ cm.getCashDetail().get(n)
+							+ "</td></tr></table>");
 				}
 
 			} else if (pm instanceof DDMode) {
-				out.println("<b> Payment Mode : DD Mode<b>");
+				out.println("<table border='0' id='studentdetail'><tr><td><b> Payment Mode </b></td>:<td> DD Mode </td></tr>");
 
 				DDMode ddm = (DDMode) pm;
-				out.println("<br> Bank Name " + ddm.getBankName());
-				out.println("<br> DD Number " + ddm.getDDNumber());
-				out.println("<br> DD Expiry Date " + ddm.getDdExpiryDate());
-				out.println("<br> DD Issue Date " + ddm.getIssueDate());
+				out.println("<tr><td><b> Bank Name </b></td><td>"
+						+ ddm.getBankName() + "</td></tr>");
+				out.println("<tr><td><b>  DD Number </b></td><td>"
+						+ ddm.getDDNumber() + "</td></tr>");
+				out.println("<tr><td><b> DD Expiry Date </b></td><td>"
+						+ ddm.getDdExpiryDate() + "</td></tr>");
+				out.println("<tr><td><b> DD Issue Date </b></td><td>"
+						+ ddm.getIssueDate() + "</td></tr></table>");
 
 			} else if (pm instanceof ChequeMode) {
-				out.println("<b> Payment Mode : Cheque Mode<b>");
+				out.println("<table border='0' id='studentdetail'><tr><td><b> Payment Mode </b></td>:<td> Cheque Mode</td></tr>");
 
 				ChequeMode chqm = (ChequeMode) pm;
-				out.println("<br> Bank Name " + chqm.getBankName());
-				out.println("<br> Cheque Number " + chqm.getChequeNumber());
-				out.println("<br> Cheque Status " + chqm.getChequeStatus());
-				out.println("<br> Cheque Expiry Date "
-						+ chqm.getExpriyDate());
-				out.println("<br>Cheque Issue Date " + chqm.getIssueDate());
+				out.println("<tr><td><b> Bank Name </b></td><td>"
+						+ chqm.getBankName() + "</td></tr>");
+				out.println("<tr><td><b> Cheque Number </b></td><td>"
+						+ chqm.getChequeNumber() + "</td></tr>");
+				out.println("<tr><td><b> Cheque Status </b></td><td>"
+						+ chqm.getChequeStatus() + "</td></tr>");
+				out.println("<tr><td><b> Cheque Expiry Date </b></td><td>"
+						+ chqm.getExpriyDate() + "</td></tr>");
+				out.println("<tr><td><b>Cheque Issue Date </b></td><td>"
+						+ chqm.getIssueDate() + "</td></tr></table>");
 
 			} else if (pm instanceof CardMode) {
-				out.println("<b> Payment Mode : Card  Mode <b>");
+				out.println("<table border='0' id='studentdetail'><tr><td><b> Payment Mode </b></td>:<td> Card  Mode </td></tr>");
 
 				CardMode crdm = (CardMode) pm;
-				out.println("<br> Card Number  " + crdm.getCardNumber());
-				out.println("<br> Transaction ID "
-						+ crdm.getTransactionID());
-				out.println("<br> Card Expiry Date  "
-						+ crdm.getCardExpiryDate());
+				out.println("<tr><td><b> Card Number  </b></td><td>"
+						+ crdm.getCardNumber() + "</td></tr>");
+				out.println("<tr><td><b> Transaction ID </b></td><td>"
+						+ crdm.getTransactionID() + "</td></tr>");
+				out.println("<tr><td><b> Card Expiry Date  </b></td><td>"
+						+ crdm.getCardExpiryDate() + "</td></tr></table>");
 
 			} else if (pm instanceof OnlineMode) {
-				out.println("<b> Payment Mode : Online Mode <b>");
+				out.println("<table border='0' id='studentdetail'><tr><td><b> Payment Mode </b></td>:<td> Online Mode </td></tr>");
 
 				OnlineMode om = (OnlineMode) pm;
-				out.println("<br> Reiciept Number  "
-						+ om.getRecieptNumber());
-				out.println("<br> Transaction ID " + om.getTrasactionID());
+				out.println("<tr><td><b> Reiciept Number  </b></td><td>"
+						+ om.getRecieptNumber() + "</td></tr>");
+				out.println("<tr><td><b> Transaction ID </b></td><td>"
+						+ om.getTrasactionID() + "</td></tr>");
 
 			} else {
 
