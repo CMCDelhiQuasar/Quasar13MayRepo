@@ -46,6 +46,16 @@ public class ChequeAction extends ActionSupport implements ServletRequestAware,
 		} else {
 			try {
 
+				// searching for whether is this registration paymnent or due
+				// payment
+				String dueTag = (String) registrationSessionMap.get("DUE_TAG");
+				if (dueTag == null) {
+					System.out.println("This is regisatrion payment ");
+				} else {
+					System.out.println("This is Due Payment  " + dueTag);
+
+				}
+
 				// if available then fetch the student object
 				Student loadedStudent = (Student) registrationSessionMap
 						.get("shagird");
@@ -73,8 +83,15 @@ public class ChequeAction extends ActionSupport implements ServletRequestAware,
 					String paramValue = request.getParameter(paramName);
 					System.out.println(paramName + "  :  " + paramValue);
 				}
-
-				return SUCCESS;
+				
+				// if regisatrion payment then go to Registartion Action else Go
+				// to Due Payment Action
+				if (dueTag == null) {
+					return SUCCESS + "_reg";
+				} else {
+					return SUCCESS + "_due";
+				}
+				
 			} catch (Exception e) {
 				System.out.println("Exception " + e.getMessage());
 			}

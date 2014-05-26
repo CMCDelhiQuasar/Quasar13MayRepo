@@ -15,25 +15,22 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class DuePaymentAction extends ActionSupport implements
 		ServletRequestAware, SessionAware {
-
 	// the request Object
 	HttpServletRequest request;
-
 	// this is for maintaining the sesson throughout the student payment.
 	Map duePaymentSessionMap;
 
 	@Override
 	public String execute() throws Exception {
-
 		System.out.println("------------------------------------>>>>>>");
-
 		// ///------->>>>> Check for the Key <<<<<-------------///
-
 		System.out.println("Inside Due Payment Action ");
-
 		System.out
-				.println("Raat ho chuki hai .. .. . around 1:50 ho raha hai .. . . the song is sexy. . .. isko jaldi se khatam karta hu. . ..  bhuk bhi lagi hai . . . kahana to kisi tarah bana liya hai. . . . khana kahana bhi padega na !. .. . .. but  kuch bhi ho .  .. .  this feeling is unparallel ! ");
-
+				.println("Raat ho chuki hai .. .. . around 1:50 ho raha hai .. . ."
+						+ " the song is sexy. . .. isko jaldi se khatam karta hu. . .. "
+						+ " bhuk bhi lagi hai . . . "
+						+ "kahana to kisi tarah bana liya hai. . . . khana kahana bhi padega na !. .. . .. "
+						+ "but  kuch bhi ho .  .. .  this feeling is unparallel ! ");
 		// check for valid session
 		if (duePaymentSessionMap.get("REGISTERING_STUDENT_EMAIL") == null) {
 			// it means no session is associated with the request and return
@@ -56,7 +53,7 @@ public class DuePaymentAction extends ActionSupport implements
 				System.out.println("This is Due Payment  " + dueTag);
 
 				System.out
-						.println("Trying to insert the updated  Pament Object ");
+						.println("Trying to insert the updated  Payment Object ");
 
 				Session session = QuasarConnectionManager.getInstance()
 						.getSession();
@@ -73,6 +70,18 @@ public class DuePaymentAction extends ActionSupport implements
 
 				session.update(p2);
 				session.getTransaction().commit();
+
+				// removing the session objects
+				duePaymentSessionMap.remove("NUMBER_OF_INSTALLMENTS");
+				duePaymentSessionMap.remove("shagird");
+				duePaymentSessionMap
+						.remove("shagirdregistrationpaymentpaymentmode");
+				duePaymentSessionMap.remove("shagirdregistrationpayment");
+				duePaymentSessionMap
+						.remove("shagirdregistrationfullfeepayment");
+				duePaymentSessionMap.remove("allInstallmentsList");
+				duePaymentSessionMap.remove("REGISTERING_STUDENT_EMAIL");
+				duePaymentSessionMap.remove("DUE_TAG");
 
 				return SUCCESS;
 			}

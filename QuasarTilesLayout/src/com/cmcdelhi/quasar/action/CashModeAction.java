@@ -89,7 +89,16 @@ public class CashModeAction extends ActionSupport implements
 					System.out.println(paramName + "  :  " + paramValue);
 				}
 
-				return SUCCESS;
+				// if regisatrion payment then go to Registartion Action else Go
+				// to Due Payment Action
+				if (dueTag == null) {
+					return SUCCESS + "_reg";
+				} else {
+					return SUCCESS + "_due";
+				}
+
+				
+				
 			} catch (Exception e) {
 				System.out.println("Exception " + e.getMessage());
 			}
