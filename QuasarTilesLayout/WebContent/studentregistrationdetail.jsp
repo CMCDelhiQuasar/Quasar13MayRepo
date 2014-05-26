@@ -93,8 +93,8 @@
 		var discount = document.forms["regform"]["discount"].value;
 		var fine = document.forms["regform"]["fine"].value;
 		document.forms["regform"]["total"].value = parseInt(coursefe, 10)
-				+ ((parseInt(coursefe, 10)*parseFloat(serviceTax))/100) - parseFloat(discount)
-				+ parseFloat(fine);
+				+ ((parseInt(coursefe, 10) * parseFloat(serviceTax)) / 100)
+				- parseFloat(discount) + parseFloat(fine);
 		//window.confirm(document.forms["regform"]["total"].value);
 		return true;
 
@@ -117,26 +117,26 @@
 
 	}
 
-	//function verifyEmailId(fld) {
+	function verifyEmailId(fld) {
 
-	//	var emailId = fld.value;
+		var emailId = fld.value;
 
-	//	var xmlhttp = new XMLHttpRequest();
+		var xmlhttp = new XMLHttpRequest();
 
-	//	xmlhttp.onreadystatechange = function() {
-	//		if (xmlhttp.readyState == 1) {
-	//			document.getElementById("myDiv").innerHTML = "Checking Email Id Please Wait .. . .";
-	//		}
-	//		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	//			document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-	//		}
-	//	}
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 1) {
+				document.getElementById("myDiv").innerHTML = "Checking Email Id Please Wait .. . .";
+			}
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+			}
+		}
 
-	//	xmlhttp.open("GET", "verifyEmailId?emailId=" + emailId, true);
-	//	xmlhttp.send();
+		xmlhttp.open("GET", "verifyEmailId?emailId=" + emailId, true);
+		xmlhttp.send();
 
-	//verifyEmailId
-	//}
+		//verifyEmailId
+	}
 </script>
 
 
@@ -170,7 +170,8 @@
 					<td><s:label value="Email Id" labelSeparator=""
 							labelposition="left" /></td>
 					<td><s:textfield label="Email Id" labelSeparator=""
-							labelposition="left" name="studentemail" /></td>
+							labelposition="left" name="studentemail"
+							onkeyup="verifyEmailId(studentemail)" /></td>
 					<td><s:fielderror fieldName="studentemail" /></td>
 					<td><div id="myDiv"></div></td>
 				</tr>
